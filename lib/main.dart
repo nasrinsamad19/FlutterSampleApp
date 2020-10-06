@@ -5,6 +5,7 @@ import 'package:sample/EmployeeHome.dart';
 import 'package:sample/Images.dart';
 import 'package:sample/Login.dart';
 import 'package:sample/Home.dart';
+import 'package:sample/OrientationCheck.dart';
 import 'package:sample/SearchList.dart';
 import 'package:sample/ShowImage.dart';
 import 'package:sample/DBTestPage .dart';
@@ -21,6 +22,6 @@ void main() => runApp(MyApp());
    Widget build(BuildContext buildContext)
   {
     return MaterialApp(
-      home:EmployeeHome()
+      home:OrientationCheck()
     );
   }}
