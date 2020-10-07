@@ -13,11 +13,9 @@ class _State extends State<DrawerEx>{
     return Scaffold(
       appBar: AppBar(title: Text('Drawer Example'),),
       drawer: Drawer(
-        child:ListView(
+        child:Column(
           children:<Widget> [
-            DrawerHeader(
-              child: ListTile(
-                title: UserAccountsDrawerHeader(
+                 UserAccountsDrawerHeader(
                   accountName: Text("Abhishek Mishra"),
                   accountEmail: Text("abhishek99@gmail.com"),
                   decoration:BoxDecoration(color: Colors.blue),
@@ -29,8 +27,8 @@ class _State extends State<DrawerEx>{
                     ),
                   ),
                 ),
-              ),
-            ),
+
+
             ListTile(
               leading: Icon(Icons.home),
               title: Text('Home'),
@@ -53,7 +51,8 @@ class _State extends State<DrawerEx>{
               },
             )
           ],
-        ) ,
+
+      ),
       ),
 
     );
