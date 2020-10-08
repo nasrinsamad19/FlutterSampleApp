@@ -8,9 +8,9 @@ class ShowImage extends StatefulWidget{
   State<StatefulWidget> createState()=> _State();
 }
 class _State extends State<ShowImage>{
-
   File _image;
- void _openGallery(BuildContext context)async{
+  //This Function pick image from gallery
+  void _openGallery(BuildContext context)async{
   // ignore: deprecated_member_use
   var picture = await ImagePicker.pickImage(source: ImageSource.gallery);
   setState(() {
@@ -22,6 +22,7 @@ class _State extends State<ShowImage>{
     }
   });
  }
+ //This function take image from camera and save it in gallery
   void _takePicture(BuildContext context)async{
     var picture = await ImagePicker.pickImage(source: ImageSource.camera);
     setState(() {
@@ -70,11 +71,7 @@ class _State extends State<ShowImage>{
           tooltip :'ImageSelected',
           child: Icon(Icons.camera_alt),
         ),
-
       ),
     );
-
-
   }
-
 }

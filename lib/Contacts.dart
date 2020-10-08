@@ -38,7 +38,11 @@ class _Mstate extends State<Contacts>{
                 Text('  ${list1[index].name+" "+'is selected'}',
                   style: TextStyle(
                     fontSize: 20,
-                  ),),]),));
+                  ),),
+              ]
+        ),
+        )
+    );
   }
   @override
   Widget build(BuildContext context) {

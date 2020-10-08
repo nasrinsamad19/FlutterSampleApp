@@ -5,7 +5,6 @@ class SearchList extends StatefulWidget {
   @override
   _SearchListState createState() => new _SearchListState();
 }
-
 class _SearchListState extends State<SearchList> {
   Widget appBarTitle = Text("Contacts", style: TextStyle(color: Colors.white),);
   Icon actionIcon =  Icon(Icons.search, color: Colors.white,);
@@ -41,9 +40,7 @@ class _SearchListState extends State<SearchList> {
     _list.add("John wally");
     _list.add("Bill gates");
     _list.add("Tim Cook");
-
   }
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -102,13 +99,11 @@ class _SearchListState extends State<SearchList> {
         ]
     );
   }
-
   void _handleSearchStart() {
     setState(() {
       _IsSearching = true;
     });
   }
-
   void _handleSearchEnd() {
     setState(() {
       this.actionIcon = Icon(Icons.search, color: Colors.white,);
@@ -119,7 +114,6 @@ class _SearchListState extends State<SearchList> {
     });
   }
 }
-
 class ChildItem extends StatelessWidget {
   final String name;
   ChildItem(this.name);
@@ -135,14 +129,11 @@ class ChildItem extends StatelessWidget {
           )
       )
       ),
-
-            title:Text(this.name,
-              style:TextStyle(color: Colors.black)),
-            trailing:IconButton(
-              icon: Icon(Icons.keyboard_arrow_right),
+      title:Text(this.name,
+          style:TextStyle(color: Colors.black)),
+      trailing:IconButton(
+        icon: Icon(Icons.keyboard_arrow_right),
             ),
-
-
     );
   }
 }

@@ -18,7 +18,6 @@ class _State extends State<GridViewEx>{
               Navigator.of(context).pop(DrawerEx());
             }
           ),
-
         ),
         body: GridView.count(
             padding: EdgeInsets.all(20),
@@ -34,7 +33,6 @@ class _State extends State<GridViewEx>{
               Image.asset('assets/images/p5.jpg'),
               Image.asset('assets/images/p6.jpg'),
             ],),
-
       ),
     );
   }

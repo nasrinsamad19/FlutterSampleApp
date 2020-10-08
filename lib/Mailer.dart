@@ -7,6 +7,7 @@ class Mailer extends StatefulWidget{
   State<StatefulWidget> createState()=> _State();
 }
 class _State extends State<Mailer>{
+  //this function used to sent mails
   void _mail() async {
     final url = 'mailto:dude@gmail.com';
     if (await canLaunch(url)) {

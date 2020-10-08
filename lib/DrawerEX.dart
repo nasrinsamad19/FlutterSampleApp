@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sample/Contacts.dart';
 import 'package:sample/EmployeeHome.dart';
 import 'package:sample/GridViewEx.dart';
+import 'package:sample/IconGrid.dart';
 import 'package:sample/Images.dart';
 class  DrawerEx extends StatefulWidget{
   State<StatefulWidget> createState()=> new _State();
@@ -49,10 +50,18 @@ class _State extends State<DrawerEx>{
               },
             ),
             ListTile(
+              hoverColor: Colors.orange,
               leading: Icon(Icons.grid_on),
               title: Text('Grid Layout'),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=> GridViewEx()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.grid_on),
+              title: Text('Icon Grid Layout'),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> IconGrid()));
               },
             ),
           ],
