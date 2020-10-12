@@ -18,7 +18,7 @@ class _State  extends State<Login> {
   //Background color change function.
   void backGroundColor(String buttonName) {
     if(buttonName=="Login")
-    {
+      {
       if(pressed = false){
         pressed = true;
       }

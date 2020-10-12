@@ -4,6 +4,7 @@ import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:url_launcher/url_launcher.dart';
 class Mailer extends StatefulWidget{
+  static String route = '/another';
   State<StatefulWidget> createState()=> _State();
 }
 class _State extends State<Mailer>{

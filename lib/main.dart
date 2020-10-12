@@ -26,6 +26,6 @@ void main() => runApp(MyApp());
    Widget build(BuildContext buildContext)
   {
     return MaterialApp(
-      home:DrawerEx()
+      home: IconGrid()
     );
   }}

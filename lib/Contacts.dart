@@ -19,6 +19,7 @@ class Contacts extends StatefulWidget{
   State<StatefulWidget> createState()=> new  _Mstate();
 }
 class _Mstate extends State<Contacts>{
+
   var txt;
   String value;
 //popUp menu function.
