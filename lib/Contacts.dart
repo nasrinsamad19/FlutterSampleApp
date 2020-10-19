@@ -19,6 +19,7 @@ class Contacts extends StatefulWidget{
   State<StatefulWidget> createState()=> new  _Mstate();
 }
 class _Mstate extends State<Contacts>{
+
   var txt;
   String value;
 //popUp menu function.
@@ -38,7 +39,11 @@ class _Mstate extends State<Contacts>{
                 Text('  ${list1[index].name+" "+'is selected'}',
                   style: TextStyle(
                     fontSize: 20,
-                  ),),]),));
+                  ),),
+              ]
+        ),
+        )
+    );
   }
   @override
   Widget build(BuildContext context) {
