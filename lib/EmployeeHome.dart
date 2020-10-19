@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sample/DBhelperEmployee.dart';
 import 'package:sample/EmployeesTable.dart';
 
+
 class EmployeeHome extends StatefulWidget{
   final String title;
   EmployeeHome({Key key ,this.title}): super(key:key);
@@ -19,6 +20,7 @@ class _State extends State<EmployeeHome>{
   TextEditingController fnameController= TextEditingController();
   TextEditingController lnameController= TextEditingController();
   TextEditingController deptController= TextEditingController();
+
   String fname;
   String lname;
   String dept;
@@ -201,10 +203,4 @@ class _State extends State<EmployeeHome>{
 
    );
   }
-
-
-
-
-
-
 }
