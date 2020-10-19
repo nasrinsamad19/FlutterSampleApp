@@ -15,7 +15,6 @@ class DBHelperRegistration {
   static const String Table = 'RegistrationTable';
   static const String DBName = 'Registration.db';
 
-
   Future<Database> get db async {
     if (_db != null) {
       return _db;
@@ -30,18 +29,22 @@ class DBHelperRegistration {
     var db = await openDatabase(path, version: 1, onCreate: _onCreate);
     return db;
   }
+
   _onCreate(Database db, int version) async {
     await db.execute(
         "CREATE TABLE $Table ($Id INTEGER PRIMARY KEY, $name TEXT,$email TEXT,$phoneNo INTEGER,$gender TEXT)");
   }
+
   Future<Registration> save(Registration registration) async {
     var dbClient = await db;
     registration.id = await dbClient.insert(Table, registration.toMap());
     return registration;
   }
+
   Future<List<Registration>> getData() async {
     var dbClient = await db;
-    List<Map> maps = await dbClient.query(Table, columns: [Id, name,email,phoneNo,gender]);
+    List<Map> maps = await dbClient.query(
+        Table, columns: [Id, name, email, phoneNo, gender]);
     List<Registration> reg = [];
     if (maps.length > 0) {
       for (int i = 0; i < maps.length; i++) {
@@ -50,10 +53,12 @@ class DBHelperRegistration {
     }
     return reg;
   }
+
   Future<int> delete(int id) async {
     var dbClient = await db;
     return await dbClient.delete(Table, where: '$Id = ?', whereArgs: [id]);
   }
+
   Future<int> update(Registration registration) async {
     var dbClient = await db;
     return await dbClient.update(Table, registration.toMap(),
@@ -64,6 +69,5 @@ class DBHelperRegistration {
     var dbClient = await db;
     dbClient.close();
   }
-
 
 }

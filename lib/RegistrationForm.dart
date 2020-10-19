@@ -15,6 +15,7 @@ class RegistrationForm extends StatefulWidget{
     return _State();
 }
 }
+
 class _State extends State<RegistrationForm>{
   Future<List<Registration>> reg;
   var dBHelper;
@@ -41,30 +42,32 @@ class _State extends State<RegistrationForm>{
   isUpdating=false;
   refreshList();
   }
+
   clearField(){
     nameController.text="";
     emailController.text="";
     phoneNoController.text="";
-
   }
+
   refreshList(){
     setState(() {
       reg= dBHelper.getData();
     });
   }
+
   void _validateInputs() {
     if (formKey.currentState.validate()) {
-//    If all data are correct then save data to out variables
+     //If all data are correct then save data to out variables
       popUp();
       formKey.currentState.save();
-
     } else {
-//    If all data are not valid then start auto validation.
+      //If all data are not valid then start auto validation.
       setState(() {
         _autoValidate = true;
       });
     }
   }
+
   void popUp()async{
     await showDialog(
         context: context,
@@ -80,6 +83,7 @@ class _State extends State<RegistrationForm>{
         )
     );
   }
+
   String validatePhoneNo(String value) {
     Pattern pattern = r'^(?:[+0]9)?[0-9]{10}$';
     RegExp regex = new RegExp(pattern);
@@ -88,6 +92,7 @@ class _State extends State<RegistrationForm>{
     else
       return null;
   }
+
   String validateEmail(String value) {
     Pattern pattern =
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
@@ -97,6 +102,7 @@ class _State extends State<RegistrationForm>{
     else
       return null;
   }
+
   void startProgress() {
     if ((tag == 0) && (tag != 1)) {
       double value = 0.0;
@@ -109,6 +115,7 @@ class _State extends State<RegistrationForm>{
       }
     }
   }
+
   void startProgress1(){
     if ((tag1 == 0) && (tag1 != 1)) {
       double value = 0.0;
@@ -120,6 +127,7 @@ class _State extends State<RegistrationForm>{
       }
     }
   }
+
   void startProgress2(){
     if ((tag2== 0) && (tag2!= 1)) {
       double value = 0.0;
@@ -131,9 +139,9 @@ class _State extends State<RegistrationForm>{
       }
     }
   }
-  void endProgress(){
 
-  double value = 0.0;
+  void endProgress(){
+    double value = 0.0;
   if ((_progress >= value) && (_progress!= 0.8999999999999999)) {
     setState(() {
       _progress -= 0.3;
@@ -142,8 +150,8 @@ class _State extends State<RegistrationForm>{
     });
   }
 }
-  void endProgress1(){
 
+  void endProgress1(){
     double value = 0.0;
     if ((_progress >= value) && (_progress!= 0.8999999999999999)) {
       setState(() {
@@ -155,7 +163,6 @@ class _State extends State<RegistrationForm>{
   }
 
   void endProgress2(){
-
     double value = 0.0;
     if ((_progress >= value) && (_progress!= 0.8999999999999999)) {
       setState(() {
@@ -165,6 +172,7 @@ class _State extends State<RegistrationForm>{
       });
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -265,7 +273,6 @@ class _State extends State<RegistrationForm>{
                         ),),
                       ),
                       Row(
-                        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Radio(
                               value: 'Male',
