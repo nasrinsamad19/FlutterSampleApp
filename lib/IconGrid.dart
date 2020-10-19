@@ -51,7 +51,6 @@ class IconGridView extends StatelessWidget{
                   },
                 child: Center(
                   child: Column(
-                    //mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children:<Widget> [
