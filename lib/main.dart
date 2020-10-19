@@ -10,6 +10,7 @@ import 'package:sample/Login.dart';
 import 'package:sample/Home.dart';
 import 'package:sample/Mailer.dart';
 import 'package:sample/OrientationCheck.dart';
+import 'package:sample/RegistrationForm.dart';
 import 'package:sample/SearchList.dart';
 import 'package:sample/ShowImage.dart';
 import 'package:sample/DBTestPage .dart';
@@ -26,6 +27,6 @@ void main() => runApp(MyApp());
    Widget build(BuildContext buildContext)
   {
     return MaterialApp(
-      home: IconGrid()
+      home: RegistrationForm()
     );
   }}
