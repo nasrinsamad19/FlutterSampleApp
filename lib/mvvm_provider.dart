@@ -2,7 +2,6 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:sample/mvvmExample.dart';
 
-
 class ViewModelProvider<T extends BaseViewModel>extends StatefulWidget{
   final T viewModel;
   final Widget child;

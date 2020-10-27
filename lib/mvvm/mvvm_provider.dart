@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'mvvm_ex.dart';
 import 'package:email_validator/email_validator.dart';
 class SubscriptionViewModelImpl implements SubscriptionViewModel {
@@ -20,7 +19,4 @@ class SubscriptionViewModelImpl implements SubscriptionViewModel {
 
   @override
   void dispose() => _mailTextController.close();
-
-
-
 }
