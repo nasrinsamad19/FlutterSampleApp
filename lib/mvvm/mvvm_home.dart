@@ -1,47 +1,28 @@
-import 'package:flutter/material.dart';
-import 'package:sample/mvvm_provider.dart';
-import 'mvvm_ex.dart';
-import 'mvvm_provider.dart';
-class HomePage extends StatefulWidget{
-  @override
-  _HomePageState createState()=> _HomePageState();
-}
+import 'package:flutter/cupertino.dart';
+import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/mvvm/mvvmExample.dart';
+import 'package:rxdart/rxdart.dart';
+import '../network.dart';
 
-class _HomePageState extends State<HomePage> {
-  SubscriptionViewModelImpl  _viewModel;
-  TextEditingController controller = TextEditingController();
+class HomeViewModel extends BaseViewModel{
+  BehaviorSubject<String> _dataObservable = BehaviorSubject();
+  Stream<String> get dataStream => _dataObservable.stream;
 
   @override
-  void initState() {
-   controller.addListener(() => _viewModel.inputMailText.add(controller.text));
-    super.initState();
+  void dispose(){
+    _dataObservable.close();
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Expanded(
-          child: StreamBuilder<String>(
-            stream: _viewModel.outputErrorText,
-            builder: (context, snapshot) {
-              return TextField(
-                  controller: controller,
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
-                      hintText: 'Email',
-                  errorText:snapshot.data ),);
-            },
-          ),
-        ),
-        StreamBuilder(
-            stream: _viewModel.outputIsButtonEnabled,
-            builder: (context, snapshot) {
-              return MaterialButton(onPressed: snapshot.data ?? false);
-            }),
-      ],
-    );
+  void doInit(BuildContext context){
+    refreshData(context);
   }
-}
 
+  @override
+  Future refreshData(BuildContext context) {
+    return NetWork.query().then((String text){
+        _dataObservable.add(text);
+    }).catchError((error){
+      _dataObservable.addError(error);
+    });
+  }
+  }

@@ -38,6 +38,7 @@ dependencies:
   email_validator: ^1.0.5
   rxdart: ^0.24.1
   network: ^0.10.0+1
+  http: ^0.12.2
 
 
 

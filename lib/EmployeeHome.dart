@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/DBhelperEmployee.dart';
+import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/DB/DBhelperEmployee.dart';
 import 'package:sample/EmployeesTable.dart';
 
 

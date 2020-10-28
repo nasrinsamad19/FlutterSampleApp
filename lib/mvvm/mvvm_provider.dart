@@ -1,22 +1,38 @@
-import 'dart:async';
-import 'mvvm_ex.dart';
 import 'package:email_validator/email_validator.dart';
-class SubscriptionViewModelImpl implements SubscriptionViewModel {
-  var _mailTextController = StreamController<String>.broadcast();
+import 'package:flutter/cupertino.dart';
+import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/mvvm/mvvmExample.dart';
+
+class ViewModelProvider<T extends BaseViewModel>extends StatefulWidget{
+  final T viewModel;
+  final Widget child;
+
+  ViewModelProvider({
+    @required this.viewModel,
+    @required this.child,
+  });
+
+  static T of<T extends BaseViewModel>(BuildContext context){
+    final type = _typeOf<ViewModelProvider<T>>();
+    ViewModelProvider<T> provider = context.ancestorWidgetOfExactType(type);
+    return provider.viewModel;
+  }
+
+  static Type _typeOf<T>() => T;
 
   @override
-  Sink get inputMailText => _mailTextController;
+  _viewModelProviderState createState()=> _viewModelProviderState();
+}
+
+class _viewModelProviderState extends State<ViewModelProvider>{
 
   @override
-  Stream<bool> get outputIsButtonEnabled =>
-      _mailTextController.stream
-          .map((email) => EmailValidator.validate(email));
+  Widget build(BuildContext context) {
+    return widget.child;
+  }
 
   @override
-  Stream<String> get outputErrorText =>
-      outputIsButtonEnabled
-          .map((isEnabled) => isEnabled ? null : "Invalid email");
-
-  @override
-  void dispose() => _mailTextController.close();
+  void dispose(){
+    widget.viewModel.dispose();
+    super.dispose();
+  }
 }
