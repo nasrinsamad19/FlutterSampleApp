@@ -14,6 +14,10 @@ import 'package:sample/RegistrationForm.dart';
 import 'package:sample/SearchList.dart';
 import 'package:sample/ShowImage.dart';
 import 'package:sample/DBTestPage .dart';
+import 'package:sample/mvvm/mvvm_ex.dart';
+import 'package:sample/mvvm_home.dart';
+import 'package:sample/mvvm_pagehome.dart';
+import 'package:sample/mvvm_provider.dart';
 import 'package:sample/studentsTable.dart';
 import 'package:sample/UserHome.dart';
 import 'package:sample/DBHelper.dart';
@@ -27,6 +31,6 @@ void main() => runApp(MyApp());
    Widget build(BuildContext buildContext)
   {
     return MaterialApp(
-      home: RegistrationForm()
+      home: HomePage(),
     );
   }}

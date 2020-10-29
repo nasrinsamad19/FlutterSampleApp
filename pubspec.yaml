@@ -35,6 +35,9 @@ dependencies:
   mailer: ^3.2.1
   grouped_buttons: ^1.0.4
   percent_indicator: ^2.1.5
+  email_validator: ^1.0.5
+  rxdart: ^0.24.1
+  network: ^0.10.0+1
 
 
 
