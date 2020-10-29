@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'DBhelperEmployee.dart';
-import 'package:sample/EmployeesTable.dart';
+import 'employee_dbhelper.dart';
+import 'package:sample/employee_table.dart';
 
 
 class EmployeeHome extends StatefulWidget{

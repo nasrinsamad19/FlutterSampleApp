@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/Contacts.dart';
-import 'package:sample/SearchList.dart';
-import 'package:sample/UserHome.dart'; //navigation pop
+import 'package:sample/contacts_listview.dart';
+import 'package:sample/search_listview.dart';
+import 'package:sample/userhome_view.dart'; //navigation pop
 
 class Home extends StatefulWidget{
   String value;

@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/Contacts.dart';
-import 'package:sample/DrawerEX.dart';
-import 'package:sample/EmployeeHome.dart';
-import 'package:sample/Login.dart';
-import 'package:sample/Mailer.dart';
-import 'package:sample/OrientationCheck.dart';
-import 'package:sample/PlatformCheck.dart';
-import 'package:sample/ShowImage.dart';
+import 'package:sample/contacts_listview.dart';
+import 'package:sample/drawer.dart';
+import 'package:sample/employee_view.dart';
+import 'package:sample/login_view.dart';
+import 'package:sample/mail_widget.dart';
+import 'package:sample/orientation_check.dart';
+import 'package:sample/platform_check.dart';
+import 'package:sample/imagepicker_gallery_camera.dart';
 
 class IconGrid extends StatelessWidget {
   @override

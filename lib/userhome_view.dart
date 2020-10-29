@@ -1,8 +1,8 @@
 //import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/Contacts.dart';
-import 'package:sample/SearchList.dart';
+import 'package:sample/contacts_listview.dart';
+import 'package:sample/search_listview.dart';
 import 'package:url_launcher/url_launcher.dart'; //data passing,bottom navigation bar
 
 // ignore: must_be_immutable

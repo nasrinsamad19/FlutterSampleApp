@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:sample/Home.dart';
+import 'package:sample/home_view.dart';
 
 void main() => runApp(Login());
 class Login extends StatefulWidget {

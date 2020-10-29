@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/mvvm/mvvm_provider.dart';
-import 'mvvm_ex2.dart';
-import 'mvvm_provider2.dart';
+import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/mvvm/viewmodel_provider.dart';
+import 'subscription_model.dart';
+import 'subscription_viewmodel_provider.dart';
 class HomePage extends StatefulWidget{
   @override
   _HomePageState createState()=> _HomePageState();

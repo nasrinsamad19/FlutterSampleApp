@@ -1,4 +1,4 @@
-import 'ApiModel.dart';
+import 'album_viewmodel.dart';
 import 'package:http/http.dart'as http;
 import 'dart:convert';
 Future<Album> fetchAlbum()async{

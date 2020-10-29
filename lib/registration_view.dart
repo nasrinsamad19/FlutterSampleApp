@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:grouped_buttons/grouped_buttons.dart';
-import 'package:sample/DrawerEX.dart';
-import 'RegTable.dart';
-import 'DBhelperRegistration.dart';
+import 'package:sample/drawer.dart';
+import 'registration_table.dart';
+import 'registration_dbhelper.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'dart:async';
 

@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'ApiModel.dart';
-import 'ApiViewProvider.dart';
+import 'album_viewmodel.dart';
+import 'album_viewprovider.dart';
+
 class ApiSample extends StatefulWidget{
   State<StatefulWidget> createState()=> new _State();
 }

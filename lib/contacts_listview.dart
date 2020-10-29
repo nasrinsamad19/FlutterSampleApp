@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'; //list,navigation to next page,popup used,delete icon wrapped in trailing
-import 'package:sample/UserHome.dart';
+import 'package:sample/userhome_view.dart';
 
 class List1  {
   final String avatar;
