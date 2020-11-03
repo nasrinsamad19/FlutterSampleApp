@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/API/users_list_viewmodel.dart';
-import 'package:sample/API/users_list_viewpeovider.dart';
+import 'package:sample/API/users_list_viewprovider.dart';
 
-class Apisample_3 extends StatefulWidget{
+class Apisample_3 extends StatefulWidget {
   State<StatefulWidget> createState()=> _State();
 }
 
-class _State extends State<Apisample_3>{
+class _State extends State<Apisample_3> {
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +19,12 @@ class _State extends State<Apisample_3>{
         body: Center(
           child: FutureBuilder<List<Users>>(
             future: fetchData(),
-            builder: (context,snapshot){
-              if(snapshot.hasData){
+            builder: (context,snapshot) {
+              if (snapshot.hasData) {
                 List<Users> data= snapshot.data;
                 return listView(data);
               }
-              else if (snapshot.hasError){
+              else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
               }
               return CircularProgressIndicator();

@@ -16,7 +16,7 @@ Future<List<Users>> fetchData()async {
 ListView listView(data) {
   return ListView.builder(
     itemCount: data.length,
-      itemBuilder: (context,index){
+      itemBuilder: (context,index) {
       return _tile(data[index].id,data[index].title,data[index].body);
       });
 }
