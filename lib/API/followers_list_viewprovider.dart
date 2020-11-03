@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'followers_list_viewmodel.dart';
 import 'package:http/http.dart'as http;
 import 'dart:convert';
+
 Future<List<Album>> fetchAlbum()async{
   final response = await http.get('https://api.github.com/users/mojombo/followers');
   if(response.statusCode==200){
     List jsonResponse= json.decode(response.body);
+    print(jsonResponse);
     return jsonResponse.map((album)=> new Album.fromJson(album)).toList();
   }
   throw Exception('failed to load data');

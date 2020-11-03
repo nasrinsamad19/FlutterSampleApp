@@ -4,7 +4,7 @@ import 'dart:convert';
 Future<Album> fetchAlbum()async{
   final response = await http.get('https://jsonplaceholder.typicode.com/albums/1');
   if(response.statusCode==200){
-    return Album.fromJason(jsonDecode(response.body));
+    return Album.fromJson(jsonDecode(response.body));
   }
   throw Exception('failed to load data');
 }
