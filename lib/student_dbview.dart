@@ -15,7 +15,7 @@ class DBTestPage extends StatefulWidget {
 }
 
 class _DBTestPageState extends State<DBTestPage> {
-  //
+
   Future<List<Student>> students;
   TextEditingController controller = TextEditingController();
   String name;
@@ -60,6 +60,7 @@ class _DBTestPageState extends State<DBTestPage> {
       refreshList();
     }
   }
+
   form() {
     return Form(
       key: formKey,
@@ -162,6 +163,12 @@ class _DBTestPageState extends State<DBTestPage> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Student Data'),
+        leading: IconButton(
+            icon:Icon(Icons.arrow_back),
+            onPressed: (){
+              Navigator.of(context).pop();
+            }
+        ),
       ),
       body: new Container(
         child: new Column(

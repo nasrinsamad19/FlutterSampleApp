@@ -6,6 +6,7 @@ class List1  {
   final String image;
   List1({this.image});
 }
+
 List<List1> list1=[
   List1(image: "assets/images/p1.jpg"),
   List1(image:"assets/images/p2.jpg"),
@@ -13,10 +14,13 @@ List<List1> list1=[
   List1(image:"assets/images/p4.jpg"),
   List1(image:"assets/images/p5.jpg"),
 ];
+
 class Images extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() => new _State();
 }
+
 class _State extends State<Images>{
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,6 +28,12 @@ class _State extends State<Images>{
         backgroundColor: Colors.black,
         appBar: AppBar(
           title: const Text('DraggableImages'),
+          leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.of(context).pop();
+              }
+          ),
         ),
         body: Center(
           child:Swiper(
@@ -37,7 +47,6 @@ class _State extends State<Images>{
             viewportFraction: 0.7,
             scale: 0.7,
             pagination: SwiperPagination(),
-            //control: SwiperControl(),
           )
         )
       ),

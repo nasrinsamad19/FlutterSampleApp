@@ -10,6 +10,7 @@ import 'package:sample/platform_check.dart';
 import 'package:sample/imagepicker_gallery_camera.dart';
 
 class IconGrid extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,10 +37,10 @@ class IconGrid extends StatelessWidget {
     );
   }
 }
+
 class IconGridView extends StatelessWidget{
  Choice choice;
  IconGridView({Key key,this.choice}):super(key:key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -55,24 +56,23 @@ class IconGridView extends StatelessWidget{
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children:<Widget> [
                       Expanded(child: IconButton(icon:Icon(choice.icon, size:55.0, color: Colors.black45),padding: EdgeInsets.only(right: 30),
-
                       )),
                       Text(choice.title,style: TextStyle(color: Colors.black45,fontSize: 25), textAlign: TextAlign.center),
-
                     ],
                   ),
                 ),
               )
-
             );
   }
 }
+
 class Choice {
   final String title;
   final IconData icon;
   final  String nav;
   Choice({this.title,this.icon,this.nav});
 }
+
  List<Choice> choices=<Choice>[
   Choice(title: 'Home',icon: Icons.home,nav:homeRoute  ),
    Choice(title: 'Contacts', icon: Icons.contacts,nav: contactsRoute),
@@ -83,6 +83,7 @@ class Choice {
    Choice(title: 'Album',icon: Icons.photo_album,nav: albumRoute),
    Choice(title: 'WiFi', icon: Icons.wifi,nav: wifiRoute),
  ];
+
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -102,8 +103,7 @@ class Router {
         return MaterialPageRoute(builder: (_) => ShowImage());
       case wifiRoute:
         return MaterialPageRoute(builder: (_) => PlatformCheck());
-
-      default:
+        default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
               body: Center(
@@ -114,7 +114,7 @@ class Router {
 }
 
 //Dynamic Routes for generating navigation
- const String homeRoute='/home';
+const String homeRoute='/home';
 const String contactsRoute ='/contacts';
 const String mapRoute='/map';
 const String phoneRoute ='/phone';

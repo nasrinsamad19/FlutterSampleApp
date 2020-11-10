@@ -15,11 +15,18 @@ class PostApi extends StatefulWidget {
 class _State extends State<PostApi> {
   final TextEditingController txtController = TextEditingController();
   Future<Album> _futureAlbum;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('PostAPI'),),
+        appBar: AppBar(title: Text('PostAPI'),
+          leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.of(context).pop();
+              }
+          ),),
         body: Container(
             padding: EdgeInsets.all(20),
           child:Align(
@@ -55,7 +62,6 @@ class _State extends State<PostApi> {
                   }
               )
           )
-
         ),
       ),
     );

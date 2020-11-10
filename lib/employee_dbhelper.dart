@@ -39,6 +39,7 @@ class DBhelperEmployee{
     employee.id = await dbClient.insert(Table, employee.toMap());
     return employee;
   }
+
   Future<List<Employee>> getEmployee() async {
     var dbClient = await db;
     List<Map> maps = await dbClient.query(Table, columns: [Id, Fname,Lname,Dept]);

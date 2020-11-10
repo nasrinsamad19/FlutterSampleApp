@@ -19,6 +19,12 @@ class _State extends State<ApiFollowers> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Followers'),
+          leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.of(context).pop();
+              }
+          ),
         ),
         body: Center(
           child: FutureBuilder<List<Album>>(

@@ -5,14 +5,25 @@ import 'package:sample/employee_view.dart';
 import 'package:sample/grid_view.dart';
 import 'package:sample/icon_grid_view.dart';
 import 'package:sample/image_transition.dart';
+
 class  DrawerEx extends StatefulWidget{
   State<StatefulWidget> createState()=> new _State();
 }
+
 class _State extends State<DrawerEx>{
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Drawer Example'),),
+      appBar: AppBar(title: Text('Drawer Example'),
+        actions: [
+          IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.of(context).pop();
+              }
+          ),
+        ],),
       drawer: Drawer(
         child:Column(
           children:<Widget> [

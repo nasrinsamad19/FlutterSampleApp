@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/mvvm/viewmodel_provider.dart';
 import 'subscription_model.dart';
 import 'subscription_viewmodel_provider.dart';
-class HomePage extends StatefulWidget{
+
+class HomePage1 extends StatefulWidget{
   @override
   _HomePageState createState()=> _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage1> {
   SubscriptionViewModelImpl  _viewModel;
   TextEditingController controller = TextEditingController();
 

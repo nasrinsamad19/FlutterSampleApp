@@ -8,6 +8,7 @@ import 'package:sample/contacts_listview.dart';
 import 'package:sample/drawer.dart';
 import 'package:sample/employee_view.dart';
 import 'package:sample/grid_view.dart';
+import 'package:sample/homePage.dart';
 import 'package:sample/icon_grid_view.dart';
 import 'package:sample/image_transition.dart';
 import 'package:sample/login_view.dart';
@@ -31,6 +32,6 @@ void main() => runApp(MyApp());
   @override
    Widget build(BuildContext buildContext) {
     return MaterialApp(
-      home: PostApi()
+      home: Home(),
     );
   }}

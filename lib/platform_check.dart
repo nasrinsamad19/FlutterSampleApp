@@ -6,8 +6,10 @@ import 'package:url_launcher/url_launcher.dart';
 class PlatformCheck extends StatefulWidget{
   State<StatefulWidget> createState() => new _State();
 }
+
 class _State extends State<PlatformCheck>{
   bool pressed=true;
+
   _launchURL(String url) async{
     if(await canLaunch(url)){
       await launch(url);
@@ -15,6 +17,7 @@ class _State extends State<PlatformCheck>{
     else{
       throw 'Not working';
     }}
+
     void backGroundColor(String buttonName) {
     if(buttonName=="PLATFORM")
     {
@@ -28,12 +31,19 @@ class _State extends State<PlatformCheck>{
       }
     }
   }
+
   @override
   Widget build(BuildContext context) {
    return MaterialApp(
      home: Scaffold(
        appBar: AppBar(
          title: Text('PlatformCheck'),
+         leading: IconButton(
+             icon:Icon(Icons.arrow_back),
+             onPressed: (){
+               Navigator.of(context).pop();
+             }
+         ),
        ),
        backgroundColor: pressed ? Colors.blue : Colors.red,
        body:Center(

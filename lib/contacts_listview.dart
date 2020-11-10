@@ -7,6 +7,7 @@ class List1  {
   final String name;
   List1({this.avatar, this.name});
 }
+
 List<List1> list1=[
   List1(avatar: "assets/images/p1.jpg", name : 'User1',),
   List1(avatar:"assets/images/p2.jpg", name : 'User2',),
@@ -14,15 +15,18 @@ List<List1> list1=[
   List1(avatar:"assets/images/p4.jpg", name : 'User4',),
   List1(avatar:"assets/images/p5.jpg", name : 'User5',),
 ];
+
 class Contacts extends StatefulWidget{
   @override
   State<StatefulWidget> createState()=> new  _Mstate();
 }
+
 class _Mstate extends State<Contacts>{
 
   var txt;
   String value;
-//popUp menu function.
+
+  //popUp menu function.
   void popUp(int index)async{
     await showDialog(
         context: context,
@@ -45,6 +49,7 @@ class _Mstate extends State<Contacts>{
         )
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -52,6 +57,12 @@ class _Mstate extends State<Contacts>{
             appBar: AppBar(
               backgroundColor: Colors.blue,
               title: Text("Contacts"),
+              leading: IconButton(
+                  icon:Icon(Icons.arrow_back),
+                  onPressed: (){
+                    Navigator.of(context).pop();
+                  }
+              ),
             ),
             body: Center(
                 child: ListView.builder(

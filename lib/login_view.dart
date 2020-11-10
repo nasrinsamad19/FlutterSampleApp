@@ -4,11 +4,12 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sample/home_view.dart';
 
-void main() => runApp(Login());
 class Login extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() => new _State();
 }
+
 class _State  extends State<Login> {
   String value;
   bool pressed=true;
@@ -27,6 +28,7 @@ class _State  extends State<Login> {
       }
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,6 +36,12 @@ class _State  extends State<Login> {
             appBar: AppBar(
               backgroundColor: Colors.blue,
               title: Text("Login"),
+              leading: IconButton(
+                  icon:Icon(Icons.arrow_back),
+                  onPressed: (){
+                    Navigator.of(context).pop();
+                  }
+              ),
             ),
             backgroundColor:  pressed ? Colors.white : Colors.green,
             body : Center(
@@ -95,7 +103,7 @@ class _State  extends State<Login> {
                             color: Colors.blue,
                             onPressed: () {
                               Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => Home(value : value)),
+                                MaterialPageRoute(builder: (context) => HomeView(value : value)),
                               );
                             })
                     ),

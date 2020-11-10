@@ -4,12 +4,12 @@ import 'package:grouped_buttons/grouped_buttons.dart';
 import 'package:sample/drawer.dart';
 import 'registration_table.dart';
 import 'registration_dbhelper.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'dart:async';
 
 class RegistrationForm extends StatefulWidget{
   final String title;
   RegistrationForm({Key key ,this.title}): super(key:key);
+
   @override
   State<StatefulWidget> createState(){
     return _State();
@@ -36,6 +36,7 @@ class _State extends State<RegistrationForm>{
   int tag1=0;
   int tag2=0;
   @override
+
   void initState() {
   super.initState();
   dBHelper=DBHelperRegistration();
@@ -251,7 +252,6 @@ class _State extends State<RegistrationForm>{
                           if(val.isNotEmpty) {
                             startProgress2();
                             tag2=1;
-
                           }
                           },
                         onChanged: (val){

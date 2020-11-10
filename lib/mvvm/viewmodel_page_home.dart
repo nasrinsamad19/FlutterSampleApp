@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/mvvm/viewmodel_home.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/mvvm/viewmodel_provider.dart';
+import 'package:sample/mvvm/viewmodel_home.dart';
+import 'package:sample/mvvm/viewmodel_provider.dart';
 
 class HomePage extends StatefulWidget{
   @override
@@ -27,7 +27,13 @@ class _HomePageState extends State<HomePage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("MVVM DEMO"),),
+      appBar: AppBar(title: Text("MVVM-DEMO"),
+        leading: IconButton(
+            icon:Icon(Icons.arrow_back),
+            onPressed: (){
+              Navigator.of(context).pop();
+            }
+        ),),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

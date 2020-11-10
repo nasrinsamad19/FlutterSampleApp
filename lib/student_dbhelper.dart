@@ -36,6 +36,7 @@ class DBHelper{
     student.id = await dbClient.insert(TABLE, student.toMap());
     return student;
   }
+
   Future<List<Student>> getStudents() async {
     var dbClient = await db;
     List<Map> maps = await dbClient.query(TABLE, columns: [ID, NAME]);

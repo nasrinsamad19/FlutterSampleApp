@@ -4,17 +4,19 @@ import 'package:sample/contacts_listview.dart';
 import 'package:sample/search_listview.dart';
 import 'package:sample/userhome_view.dart'; //navigation pop
 
-class Home extends StatefulWidget{
+class HomeView extends StatefulWidget{
   String value;
-  Home({Key key,@required this.value}) : super(key:key);
+  HomeView({Key key,@required this.value}) : super(key:key);
   @override
   State<StatefulWidget>  createState() => new  _State(value: value);
 }
-class _State extends State<Home> {
+
+class _State extends State<HomeView> {
   TextEditingController name = new TextEditingController();
   String value;
   String txt='Welcome';
   _State({this.value});
+
   _onTap(int index) {
     if(index==1)
       {
@@ -29,21 +31,26 @@ class _State extends State<Home> {
     }
 
   }
-  @override
 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
                 appBar: AppBar(
                   backgroundColor: Colors.blue,
-                  title: Text("Home"),),
+                  title: Text("Home"),
+                  leading: IconButton(
+                      icon:Icon(Icons.arrow_back),
+                      onPressed: (){
+                        Navigator.of(context).pop();
+                      }
+                  ),),
           body: Center(
             child: Container(
               alignment: Alignment.center,
               child: Text(txt +" " + value),
             ),
           ),
-
           bottomNavigationBar:BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             items: <BottomNavigationBarItem>[
@@ -57,10 +64,8 @@ class _State extends State<Home> {
               ),
             ],
             onTap:_onTap ,
-
-            ) ,
-
-    ),
+          ) ,
+        ),
     );
   }
 }
