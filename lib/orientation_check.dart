@@ -6,16 +6,16 @@ import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
 class OrientationCheck extends StatefulWidget{
+
   void main(){
     WidgetsFlutterBinding.ensureInitialized();
-
-
-}
+  }
   State<StatefulWidget> createState()=> _State();
 }
-class _State extends State<OrientationCheck>{
 
+class _State extends State<OrientationCheck>{
   File _image;
+
   void _openGallery(BuildContext context)async{
     // ignore: deprecated_member_use
     var picture = await ImagePicker.pickImage(source: ImageSource.gallery);
@@ -28,6 +28,7 @@ class _State extends State<OrientationCheck>{
       }
     });
   }
+
   void _takePicture(BuildContext context)async{
     var picture = await ImagePicker.pickImage(source: ImageSource.camera);
     setState(() {
@@ -40,12 +41,19 @@ class _State extends State<OrientationCheck>{
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('SelectImage'),
+          leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.of(context).pop();
+              }
+          ),
         ),
         body: Center(
             child: ListView(
@@ -70,31 +78,24 @@ class _State extends State<OrientationCheck>{
                   onPressed: (){
                     SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight,DeviceOrientation.landscapeLeft]);
                   },
-
                 ),
                 RaisedButton(
                   child: Text("Portrait"),
                   onPressed: (){
                     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
                   },
-
                 )
               ],
             )
         ),
         floatingActionButton: FloatingActionButton(
           onPressed:(){
-
             _takePicture(context);
           } ,
           tooltip :'ImageSelected',
           child: Icon(Icons.camera_alt),
         ),
-
       ),
     );
-
-
   }
-
 }

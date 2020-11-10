@@ -2,11 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:sample/API/album_view.dart';
 import 'package:sample/API/followers_list_view.dart';
+import 'package:sample/API/postApi_view.dart';
 import 'package:sample/API/users_list_view.dart';
 import 'package:sample/contacts_listview.dart';
 import 'package:sample/drawer.dart';
 import 'package:sample/employee_view.dart';
 import 'package:sample/grid_view.dart';
+import 'package:sample/homePage.dart';
 import 'package:sample/icon_grid_view.dart';
 import 'package:sample/image_transition.dart';
 import 'package:sample/login_view.dart';
@@ -30,6 +32,6 @@ void main() => runApp(MyApp());
   @override
    Widget build(BuildContext buildContext) {
     return MaterialApp(
-      home: Apisample_3()
+      home: Home(),
     );
   }}

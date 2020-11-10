@@ -7,8 +7,10 @@ import 'package:image_picker/image_picker.dart';
 class ShowImage extends StatefulWidget{
   State<StatefulWidget> createState()=> _State();
 }
+
 class _State extends State<ShowImage>{
   File _image;
+
   //This Function pick image from gallery
   void _openGallery(BuildContext context)async{
   // ignore: deprecated_member_use
@@ -22,6 +24,7 @@ class _State extends State<ShowImage>{
     }
   });
  }
+
  //This function take image from camera and save it in gallery
   void _takePicture(BuildContext context)async{
     var picture = await ImagePicker.pickImage(source: ImageSource.camera);
@@ -35,12 +38,19 @@ class _State extends State<ShowImage>{
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('SelectImage'),
+          leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.of(context).pop();
+              }
+          ),
         ),
         body: Center(
             child: ListView(
@@ -65,7 +75,6 @@ class _State extends State<ShowImage>{
         ),
         floatingActionButton: FloatingActionButton(
           onPressed:(){
-
             _takePicture(context);
           } ,
           tooltip :'ImageSelected',

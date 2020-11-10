@@ -26,6 +26,12 @@ class _State extends State<ApiSample> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Api Example'),
+          leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.of(context).pop();
+              }
+          ),
         ),
         body: Center(
           child: FutureBuilder<Album>(

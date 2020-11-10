@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'subscription_model.dart';
 import 'package:email_validator/email_validator.dart';
+
 class SubscriptionViewModelImpl implements SubscriptionViewModel {
   var _mailTextController = StreamController<String>.broadcast();
 

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'employee_dbhelper.dart';
 import 'package:sample/employee_table.dart';
 
-
 class EmployeeHome extends StatefulWidget{
   final String title;
   EmployeeHome({Key key ,this.title}): super(key:key);
+
   @override
   State<StatefulWidget> createState(){
     return _State();
@@ -37,17 +37,20 @@ class _State extends State<EmployeeHome>{
     isUpdating=false;
     refreshList();
   }
+
   refreshList(){
     setState(() {
       employees= dBHelper.getEmployee();
     });
   }
+
   clearField(){
     fnameController.text="";
     lnameController.text="";
     deptController.text="";
 
   }
+
   validate() {
     if (formKey.currentState.validate()) {
       formKey.currentState.save();
@@ -65,6 +68,7 @@ class _State extends State<EmployeeHome>{
       refreshList();
     }
   }
+
   form(){
     return Form(
       key: formKey,
@@ -119,10 +123,10 @@ class _State extends State<EmployeeHome>{
           ],
         ),
       ),
-
     );
 }
-  SingleChildScrollView dataTable(List<Employee> employees) {
+
+SingleChildScrollView dataTable(List<Employee> employees) {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: DataTable(
@@ -164,9 +168,9 @@ class _State extends State<EmployeeHome>{
        )
          .toList(),
      ),
-
     );
 }
+
   list() {
     return Expanded(
       child: FutureBuilder(
@@ -175,16 +179,15 @@ class _State extends State<EmployeeHome>{
           if (snapshot.hasData) {
             return dataTable(snapshot.data);
           }
-
           if (null == snapshot.data || snapshot.data.length == 0) {
             return Text("No Data Found");
           }
-
           return CircularProgressIndicator();
         },
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
    return Scaffold(
@@ -196,11 +199,9 @@ class _State extends State<EmployeeHome>{
          children:<Widget> [
            form(),
            list(),
-
          ],
        ),
      ),
-
    );
   }
 }

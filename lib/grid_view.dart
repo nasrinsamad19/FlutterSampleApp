@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/drawer.dart';
 
-class GridViewEx extends StatefulWidget{
-  State<StatefulWidget> createState()=> _State();
+class GridViewEx extends StatefulWidget {
+  State<StatefulWidget> createState() => _State();
 }
+
 class _State extends State<GridViewEx>{
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

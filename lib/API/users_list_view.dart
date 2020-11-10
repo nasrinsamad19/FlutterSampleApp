@@ -15,6 +15,12 @@ class _State extends State<Apisample_3> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Users_List'),
+          leading: IconButton(
+              icon:Icon(Icons.arrow_back),
+              onPressed: (){
+                Navigator.of(context).pop();
+              }
+          ),
         ),
         body: Center(
           child: FutureBuilder<List<Users>>(

@@ -1,8 +1,6 @@
-//import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/contacts_listview.dart';
-import 'package:sample/search_listview.dart';
 import 'package:url_launcher/url_launcher.dart'; //data passing,bottom navigation bar
 
 // ignore: must_be_immutable
@@ -21,6 +19,7 @@ class _State extends State<UserHome>{
     Navigator.of(context,)
         .pop( Contacts());
     }
+
     //URL navigation.
     _launchURL(String url) async{
     if(await canLaunch(url)){
@@ -29,12 +28,19 @@ class _State extends State<UserHome>{
     else{
       throw 'Not working';
     }}
+
     @override
     Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Text("UserHome"),
+        leading: IconButton(
+            icon:Icon(Icons.arrow_back),
+            onPressed: (){
+              Navigator.of(context).pop();
+            }
+        ),
       ),
       body: Center(
           child:ListView(

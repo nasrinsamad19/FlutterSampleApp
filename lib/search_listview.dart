@@ -5,6 +5,7 @@ class SearchList extends StatefulWidget {
   @override
   _SearchListState createState() => new _SearchListState();
 }
+
 class _SearchListState extends State<SearchList> {
   Widget appBarTitle = Text("Contacts", style: TextStyle(color: Colors.white),);
   Icon actionIcon =  Icon(Icons.search, color: Colors.white,);
@@ -13,6 +14,7 @@ class _SearchListState extends State<SearchList> {
   List<String> _list;
   bool _IsSearching;
   String _searchText = "";
+
   _SearchListState() {
     _searchQuery.addListener(() {
       if (_searchQuery.text.isEmpty) {
@@ -29,18 +31,21 @@ class _SearchListState extends State<SearchList> {
       }
     });
   }
+
   @override
   void initState() {
     super.initState();
     _IsSearching = false;
     init();
   }
+
   void init() {
     _list = List();
     _list.add("John wally");
     _list.add("Bill gates");
     _list.add("Tim Cook");
   }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -52,9 +57,11 @@ class _SearchListState extends State<SearchList> {
       ),
     );
   }
+
   List<ChildItem> _buildList() {
     return _list.map((contact) => ChildItem(contact)).toList();
   }
+
   List<ChildItem> _buildSearchList() {
     if (_searchText.isEmpty) {
       return _list.map((contact) => ChildItem(contact)).toList();
@@ -70,6 +77,7 @@ class _SearchListState extends State<SearchList> {
       return _searchList.map((contact) => ChildItem(contact)).toList();
     }
   }
+
   Widget buildBar(BuildContext context){
     return AppBar(
         centerTitle: true,
@@ -99,11 +107,13 @@ class _SearchListState extends State<SearchList> {
         ]
     );
   }
+
   void _handleSearchStart() {
     setState(() {
       _IsSearching = true;
     });
   }
+
   void _handleSearchEnd() {
     setState(() {
       this.actionIcon = Icon(Icons.search, color: Colors.white,);
@@ -114,6 +124,7 @@ class _SearchListState extends State<SearchList> {
     });
   }
 }
+
 class ChildItem extends StatelessWidget {
   final String name;
   ChildItem(this.name);
