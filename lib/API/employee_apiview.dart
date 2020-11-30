@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/API/Employees_model.dart';
+import 'package:sample/API/employee_data.dart';
 import 'package:sample/API/employee_viewprovider.dart';
 
 class ApiSample_4 extends StatefulWidget {
@@ -14,7 +15,7 @@ class _State extends State<ApiSample_4> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Employee-Data'),
+          title: Text('Employees'),
           leading: IconButton(
               icon:Icon(Icons.arrow_back),
               onPressed: (){
@@ -28,7 +29,27 @@ class _State extends State<ApiSample_4> {
               builder: (context,snapshot) {
                 if (snapshot.hasData) {
                   List<Data> data = snapshot.data;
-                  return listView(data);
+                  return ListView.builder(
+                      itemCount:  data.length,
+                      itemBuilder: (context,index) {
+                        return ListTile(
+                          leading: CircleAvatar(child: Container(
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: AssetImage(data[index].profileImage)
+                                  )))),
+                          title: Text(data[index].employeeName),
+                          trailing: IconButton(
+                              icon:Icon(Icons.arrow_forward),
+                              onPressed: (){
+                                print(data[index].employeeName);
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> EmployeeData(id: data[index].id,)));
+                              }
+                          ),
+                        );
+                      });
                 }else if (snapshot.hasError) {
                   return Text('${snapshot.error}');
                 }
