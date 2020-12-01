@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/API/followers_list_view.dart';
 import 'package:sample/API/postApi_view.dart';
+import 'package:sample/API/postapi_employee_view.dart';
 import 'package:sample/API/users_list_view.dart';
 import 'package:sample/API/employee_apiview.dart';
 import 'API/album_view.dart';
@@ -65,6 +66,12 @@ class _State extends State<phase2>{
                 title: Text('Employees-Api'),
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> ApiSample_4()));
+                },
+              ),
+              ListTile(
+                title: Text('Employees-PostApi'),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> PostApiEmployee()));
                 },
               ),
             ],

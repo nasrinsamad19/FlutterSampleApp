@@ -10,9 +10,11 @@ Future<Album> createAlbum(String title) async {
       'title': title,
     }),
   );
-
+print(response.body);
+print(response.statusCode);
   if (response.statusCode==201) {
-    return Album.fromJson(jsonDecode(response.body));
+    return Album.fromJson(jsonDecode(response.body)
+    );
   } else {
     throw Exception('Failed to create album');
   }
