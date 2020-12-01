@@ -4,7 +4,6 @@ class Data {
   int employeeSalary;
   int employeeAge;
   String profileImage;
-
   Data({this.employeeName,this.employeeSalary,this.employeeAge,this.profileImage,this.id,});
 
   factory Data.fromJson(Map<String, dynamic> json) => Data(

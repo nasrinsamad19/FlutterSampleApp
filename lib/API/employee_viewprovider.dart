@@ -1,7 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:sample/API/Employees_model.dart';
-
 Future<List<Data>> fetchData() async{
     final response = await http.get("https://dummy.restapiexample.com/api/v1/employees");
     if(response.statusCode== 200){
