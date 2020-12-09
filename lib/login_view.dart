@@ -103,7 +103,7 @@ class _State  extends State<Login> {
                             color: Colors.blue,
                             onPressed: () {
                               Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => HomeView(value : value)),
+                                MaterialPageRoute(builder: (context) => HomeView(value: value,)),
                               );
                             })
                     ),

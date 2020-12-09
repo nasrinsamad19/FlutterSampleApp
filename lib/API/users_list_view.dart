@@ -24,7 +24,7 @@ class _State extends State<Apisample_3> {
         ),
         body: Center(
           child: FutureBuilder<List<Users>>(
-            future: fetchData(),
+            future: fetchUsers(),
             builder: (context,snapshot) {
               if (snapshot.hasData) {
                 List<Users> data= snapshot.data;

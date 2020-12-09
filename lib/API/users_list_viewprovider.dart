@@ -4,7 +4,7 @@ import 'users_list_viewmodel.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-Future<List<Users>> fetchData()async {
+Future<List<Users>> fetchUsers()async {
   final response= await http.get('https://jsonplaceholder.typicode.com/posts');
   if (response.statusCode==200) {
     List jsonResponse= json.decode(response.body);

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sample/API/followers_list_view.dart';
 import 'package:sample/API/postApi_view.dart';
 import 'package:sample/API/users_list_view.dart';
+import 'package:sample/API/employee_apiview.dart';
 import 'API/album_view.dart';
 import 'package:sample/mvvm/viewmodel_provider.dart';
 import 'package:sample/mvvm/viewmodel_page_home.dart';
@@ -58,6 +59,12 @@ class _State extends State<phase2>{
                     child: HomePage(),
                   )
                   ));
+                },
+              ),
+              ListTile(
+                title: Text('Employees-Api'),
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ApiSample_4()));
                 },
               ),
             ],
