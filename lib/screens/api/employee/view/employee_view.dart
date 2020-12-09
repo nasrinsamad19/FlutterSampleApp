@@ -49,7 +49,7 @@ class _State extends State<ApiSample_4> {
                           ),
                         );
                       });
-                }else if (snapshot.hasError) {
+                } else if (snapshot.hasError) {
                   return Text('${snapshot.error}');
                 }
                 return CircularProgressIndicator();
