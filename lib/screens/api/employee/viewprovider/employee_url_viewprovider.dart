@@ -1,6 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:sample/Screens/api/employee/model/employee_data_model.dart';
+import '../model/employee_data_model.dart';
 
 Future<EmpData> fetchEmpData(int id) async{
   var endpointurl = "http://dummy.restapiexample.com/api/v1/employee/";

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/contacts_listview.dart';
+import 'contacts_listview.dart';
 import 'package:url_launcher/url_launcher.dart'; //data passing,bottom navigation bar
 
 // ignore: must_be_immutable

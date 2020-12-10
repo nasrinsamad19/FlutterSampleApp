@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Mvvm/Sample/model/abstract_base_viewmodel.dart';
+import '../model/abstract_base_viewmodel.dart';
 
 class ViewModelProvider<T extends BaseViewModel>extends StatefulWidget{
   final T viewModel;

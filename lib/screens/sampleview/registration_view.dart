@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:grouped_buttons/grouped_buttons.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/drawer.dart';
+import 'drawer.dart';
 import 'registration_table.dart';
 import 'registration_dbhelper.dart';
 import 'dart:async';

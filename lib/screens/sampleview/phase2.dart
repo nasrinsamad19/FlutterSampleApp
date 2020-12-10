@@ -2,12 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sample/Screens/Api/Album/view/album_view.dart';
 import 'package:sample/Screens/Api/Followers/view/followers_list_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Post_api/Album/view/postApi_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Post_api/Employee/view/postapi_employee_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Api/User_list/view/users_list_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Mvvm/Sample/viewprovider/viewmodel_provider.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Mvvm/Sample/view/viewmodel_page_home.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Mvvm/Sample/view/viewmodel_home.dart';
+import '../post_api/album/view/postApi_view.dart';
+import '../post_api/employee/view/postapi_employee_view.dart';
+import '../api/user_list/view/users_list_view.dart';
+import '../mvvm/sample/viewprovider/viewmodel_provider.dart';
+import '../mvvm/sample/view/viewmodel_page_home.dart';
+import '../mvvm/sample/view/viewmodel_home.dart';
 import 'package:sample/screens/api/employee/view/employee_view.dart';
 class phase2 extends StatefulWidget{
   State<phase2> createState()=> _State();

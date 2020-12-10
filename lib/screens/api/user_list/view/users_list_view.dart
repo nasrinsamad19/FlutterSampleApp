@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Api/User_list/model/users_list_viewmodel.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Api/User_list/viewprovider/users_list_viewprovider.dart';
+import '../model/users_list_viewmodel.dart';
+import '../viewprovider/users_list_viewprovider.dart';
 
 class Apisample_3 extends StatefulWidget {
   State<StatefulWidget> createState()=> _State();

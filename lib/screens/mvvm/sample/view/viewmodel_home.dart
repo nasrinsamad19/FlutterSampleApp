@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Mvvm/Sample/model/abstract_base_viewmodel.dart';
+import '../model/abstract_base_viewmodel.dart';
 import 'package:rxdart/rxdart.dart';
 import '../../../sampleview/network.dart';
 

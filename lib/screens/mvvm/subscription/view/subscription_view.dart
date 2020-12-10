@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../model/subscription_model.dart';
-import 'package:sample/screens/mvvm/subscription/viewprovider/subscription_viewmodel_provider.dart';
 import '../viewprovider/subscription_viewmodel_provider.dart';
 
 class HomePage1 extends StatefulWidget{

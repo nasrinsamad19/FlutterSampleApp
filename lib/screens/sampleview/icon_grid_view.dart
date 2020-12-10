@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/contacts_listview.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/drawer.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/employee_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/login_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/mail_widget.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/orientation_check.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/platform_check.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/imagepicker_gallery_camera.dart';
+import 'contacts_listview.dart';
+import 'drawer.dart';
+import 'employee_view.dart';
+import 'login_view.dart';
+import 'mail_widget.dart';
+import 'orientation_check.dart';
+import 'platform_check.dart';
+import 'imagepicker_gallery_camera.dart';
 
 class IconGrid extends StatelessWidget {
 

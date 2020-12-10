@@ -1,6 +1,6 @@
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:sample/screens/sampleview/employee_table.dart';
+import 'employee_table.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:io'as io;
 

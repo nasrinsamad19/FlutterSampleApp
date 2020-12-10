@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Post_api/Album/model/postApi_model.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Post_api/Album/viewprovider/postApi_viewprovider.dart';
+import '../model/postApi_model.dart';
+import '../viewprovider/postApi_viewprovider.dart';
 
 class PostApi extends StatefulWidget {
   PostApi({Key key}) : super(key: key);

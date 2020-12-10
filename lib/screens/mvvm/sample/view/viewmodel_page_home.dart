@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Mvvm/Sample/view/viewmodel_home.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Mvvm/Sample/viewprovider/viewmodel_provider.dart';
+import '../view/viewmodel_home.dart';
+import '../viewprovider/viewmodel_provider.dart';
 
 class HomePage extends StatefulWidget{
   @override

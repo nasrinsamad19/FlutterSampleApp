@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Post_api/Employee/viewprovider/postapi_employee_viewprovider.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/Screens/Post_api/Employee/model/postapi_employee_model.dart';
+import '../viewprovider/postapi_employee_viewprovider.dart';
+import '../model/postapi_employee_model.dart';
 
 class PostApiEmployee extends StatefulWidget {
   PostApiEmployee({Key key}) : super(key: key);

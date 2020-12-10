@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/Screens/api/employee/model/employee_data_model.dart';
-import 'package:sample/Screens/api/employee/viewprovider/employee_url_viewprovider.dart';
+import '../model/employee_data_model.dart';
+import '../viewprovider/employee_url_viewprovider.dart';
 
 class EmployeeData extends StatefulWidget {
   int id;

@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/contacts_listview.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/employee_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/grid_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/icon_grid_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/image_transition.dart';
+import 'contacts_listview.dart';
+import 'employee_view.dart';
+import 'grid_view.dart';
+import 'icon_grid_view.dart';
+import 'image_transition.dart';
 
 class  DrawerEx extends StatefulWidget{
   State<StatefulWidget> createState()=> new _State();

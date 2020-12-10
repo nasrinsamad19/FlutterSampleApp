@@ -1,6 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:sample/Screens/api/employee/model/Employees_model.dart';
+import '../model/Employees_model.dart';
 
 Future<List<Data>> fetchData() async{
     final response = await http.get("https://dummy.restapiexample.com/api/v1/employees");

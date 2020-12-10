@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/contacts_listview.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/search_listview.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/userhome_view.dart'; //navigation pop
+import 'contacts_listview.dart';
+import 'search_listview.dart';
+import 'userhome_view.dart'; //navigation pop
 
 class HomeView extends StatefulWidget{
   String value;

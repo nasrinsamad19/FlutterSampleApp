@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sample/Screens/api/employee/model/Employees_model.dart';
-import 'package:sample/Screens/api/employee/view/employee_url_view.dart';
-import 'package:sample/Screens/api/employee/viewprovider/employee_viewprovider.dart';
+import '../model/Employees_model.dart';
+import '../view/employee_url_view.dart';
+import '../viewprovider/employee_viewprovider.dart';
 class ApiSample_4 extends StatefulWidget {
   State<StatefulWidget> createState()=> new _State();
 }

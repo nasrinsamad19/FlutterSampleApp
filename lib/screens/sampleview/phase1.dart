@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/drawer.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/icon_grid_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/registration_view.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/search_listview.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/student_dbview.dart';
+import 'drawer.dart';
+import 'icon_grid_view.dart';
+import 'registration_view.dart';
+import 'search_listview.dart';
+import 'student_dbview.dart';
 
 class phase1 extends StatefulWidget{
   State<phase1> createState()=> _State();

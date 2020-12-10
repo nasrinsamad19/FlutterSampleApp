@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/phase1.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/phase2.dart';
+import 'phase1.dart';
+import 'phase2.dart';
 
 class Home extends StatefulWidget{
   State<StatefulWidget> createState()=> _State();

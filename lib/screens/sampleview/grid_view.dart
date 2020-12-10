@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ubais/AndroidStudioProjects/sample/lib/screens/sampleview/drawer.dart';
+import 'drawer.dart';
 
 class GridViewEx extends StatefulWidget {
   State<StatefulWidget> createState() => _State();
